@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalMart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles/base/reset.css">
+  <link rel="stylesheet" href="../../styles/base/theme.css">
+  <link rel="stylesheet" href="../../styles/pages/home.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-screen">
+      <header class="topbar">
+        <div>
+          <h1>LocalMart</h1>
+          <p class="location">An app that helps local sellers across Botswana showcase products and reach more buyers.</p>
+        </div>
+      </header>
+
+      <section class="search-panel" id="searchPanel" aria-label="Search and filters">
+        <label class="search-box" for="searchInput">
+          <span class="search-icon" aria-hidden="true"></span>
+          <input id="searchInput" type="search" placeholder="Search products or vendors..." autocomplete="off">
+          <button class="clear-search-button" id="clearSearchButton" type="button" aria-label="Clear search">Clear</button>
+        </label>
+
+        <div class="chip-row" id="categoryFilters" role="tablist" aria-label="Browse categories">
+          <button class="chip is-active" type="button" data-category="all">All</button>
+          <button class="chip" type="button" data-category="handmade">Handmade</button>
+          <button class="chip" type="button" data-category="food-bakery">Food &amp; Bakery</button>
+          <button class="chip" type="button" data-category="clothing">Clothing</button>
+          <button class="chip" type="button" data-category="accessories">Accessories</button>
+          <button class="chip" type="button" data-category="decor">Decor</button>
+          <button class="chip" type="button" data-category="gifts">Gifts</button>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
+          <h2>Featured vendors</h2>
+        </div>
+        <div class="vendors-row" id="featuredVendors" aria-live="polite"></div>
+      </section>
+
+      <section class="content-section products-section">
+        <div class="section-header">
+          <h2>Popular products</h2>
+        </div>
+        <div class="product-grid" id="popularProducts" aria-live="polite"></div>
+      </section>
+
+      <nav class="bottom-nav" aria-label="Primary">
+        <a class="nav-item is-active" href="#" aria-current="page">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 10.5L12 4L20 10.5V19C20 19.55 19.55 20 19 20H14V14H10V20H5C4.45 20 4 19.55 4 19V10.5Z"></path>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a class="nav-item" href="#" id="searchNavLink">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="5.5"></circle>
+            <path d="M15.2 15.2L20 20"></path>
+          </svg>
+          <span>Search</span>
+        </a>
+        <a class="nav-item" href="../cart/index.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 6H7L8.2 13.2C8.28 13.68 8.7 14.03 9.19 14.03H17.3C17.76 14.03 18.17 13.72 18.29 13.28L19.75 8.25H8"></path>
+            <circle cx="10" cy="18.25" r="1.25"></circle>
+            <circle cx="17" cy="18.25" r="1.25"></circle>
+          </svg>
+          <span>Cart</span>
+        </a>
+        <a class="nav-item" href="../profile/index.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8.25" r="3.25"></circle>
+            <path d="M6 19C6.85 16.4 9.03 15 12 15C14.97 15 17.15 16.4 18 19"></path>
+          </svg>
+          <span>Profile</span>
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <script src="../../scripts/core/catalog.js"></script>
+  <script src="../../scripts/modules/catalog/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalMart - Product Details</title>
+  <link rel="stylesheet" href="../../styles/base/reset.css">
+  <link rel="stylesheet" href="../../styles/base/theme.css">
+  <link rel="stylesheet" href="../../styles/pages/product-details.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-screen">
+      <header class="topbar">
+        <a class="back-link" href="../home/index.html">&larr; Back</a>
+        <h1>Product details</h1>
+        <a class="cart-link" href="../cart/index.html" aria-label="Open cart">
+          <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 6H7L8.2 13.2C8.28 13.68 8.7 14.03 9.19 14.03H17.3C17.76 14.03 18.17 13.72 18.29 13.28L19.75 8.25H8"></path>
+            <circle cx="10" cy="18.25" r="1.25"></circle>
+            <circle cx="17" cy="18.25" r="1.25"></circle>
+          </svg>
+        </a>
+      </header>
+
+      <section class="product-hero" aria-label="Product image">
+        <div class="product-image-frame">
+          <img class="product-image" id="productHeroImage" src="../../assets/images/products/leather-tote-bag.svg" alt="Leather tote bag">
+        </div>
+      </section>
+
+      <section class="product-summary">
+        <h2 id="productName">Leather tote bag</h2>
+        <p class="meta-line" id="productMeta">by Thabang's Bags | Gaborone</p>
+
+        <div class="rating-row" id="productRatingRow" aria-label="4 out of 5 with 24 reviews">
+          <div class="rating" id="productRating"></div>
+          <p id="productReviewSummary">4.0 (24 reviews)</p>
+        </div>
+
+        <p class="price" id="productPrice">P 320.00</p>
+      </section>
+
+      <section class="content-section">
+        <h3>Description</h3>
+        <div class="description-card">
+          <p class="product-description" id="productDescription"></p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h3>Quantity</h3>
+        <div class="quantity-row">
+          <div class="quantity-control" aria-label="Quantity selector">
+            <button id="decreaseQty" type="button" aria-label="Decrease quantity">-</button>
+            <span id="quantityValue">1</span>
+            <button id="increaseQty" type="button" aria-label="Increase quantity">+</button>
+          </div>
+          <p class="stock-text" id="stockText">In stock: 8</p>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button class="primary-button" id="addToCartButton" type="button">Add to cart - P 320.00</button>
+        <a class="secondary-button" href="../cart/index.html">View cart</a>
+      </section>
+
+      <section class="content-section reviews-section">
+        <h3>Customer reviews</h3>
+        <div id="reviewsList"></div>
+      </section>
+
+      <nav class="bottom-nav" aria-label="Primary">
+        <a class="nav-item is-active" href="../home/index.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 10.5L12 4L20 10.5V19C20 19.55 19.55 20 19 20H14V14H10V20H5C4.45 20 4 19.55 4 19V10.5Z"></path>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a class="nav-item" href="../home/index.html?focusSearch=1">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="5.5"></circle>
+            <path d="M15.2 15.2L20 20"></path>
+          </svg>
+          <span>Search</span>
+        </a>
+        <a class="nav-item" href="../cart/index.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 6H7L8.2 13.2C8.28 13.68 8.7 14.03 9.19 14.03H17.3C17.76 14.03 18.17 13.72 18.29 13.28L19.75 8.25H8"></path>
+            <circle cx="10" cy="18.25" r="1.25"></circle>
+            <circle cx="17" cy="18.25" r="1.25"></circle>
+          </svg>
+          <span>Cart</span>
+        </a>
+        <a class="nav-item" href="../profile/index.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8.25" r="3.25"></circle>
+            <path d="M6 19C6.85 16.4 9.03 15 12 15C14.97 15 17.15 16.4 18 19"></path>
+          </svg>
+          <span>Profile</span>
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <div class="toast" id="cartToast" role="status" aria-live="polite">Successfully added to cart</div>
+
+  <script src="../../scripts/core/catalog.js"></script>
+  <script src="../../scripts/core/cart.js"></script>
+  <script src="../../scripts/modules/product-details/details.js"></script>
+</body>
+</html>

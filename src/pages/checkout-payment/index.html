@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalMart - Checkout Payment</title>
+  <link rel="stylesheet" href="../../styles/base/reset.css">
+  <link rel="stylesheet" href="../../styles/base/theme.css">
+  <link rel="stylesheet" href="../../styles/pages/checkout-payment.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-screen">
+      <header class="topbar">
+        <a class="back-link" href="../checkout-delivery/index.html">&larr; Delivery</a>
+        <h1>Payment</h1>
+        <span class="topbar-spacer" aria-hidden="true"></span>
+      </header>
+
+      <section class="stepper" aria-label="Checkout progress">
+        <div class="step is-complete">
+          <span class="step-number">&#10003;</span>
+          <span class="step-label">Delivery</span>
+        </div>
+        <span class="step-line is-complete"></span>
+        <div class="step is-active">
+          <span class="step-number">2</span>
+          <span class="step-label">Payment</span>
+        </div>
+        <span class="step-line"></span>
+        <div class="step">
+          <span class="step-number">3</span>
+          <span class="step-label">Confirm</span>
+        </div>
+      </section>
+
+      <section class="summary-card">
+        <h2>Order summary</h2>
+        <div class="summary-row">
+          <span id="summaryProductLabel">Items</span>
+          <strong id="summaryProductTotal">P 0.00</strong>
+        </div>
+        <div class="summary-row">
+          <span>Delivery</span>
+          <strong id="summaryDeliveryFee">P 0.00</strong>
+        </div>
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <strong id="summaryGrandTotal">P 0.00</strong>
+        </div>
+      </section>
+
+      <form class="payment-form" id="paymentForm">
+        <section class="content-section">
+          <h2>Payment method</h2>
+
+          <label class="method-card is-selected">
+            <input type="radio" name="paymentMethod" value="orange-money" checked>
+            <span class="method-radio"></span>
+            <span class="method-copy">
+              <strong>Orange Money</strong>
+            </span>
+          </label>
+
+          <label class="method-card">
+            <input type="radio" name="paymentMethod" value="mascom-myzaka">
+            <span class="method-radio"></span>
+            <span class="method-copy">
+              <strong>Mascom MyZaka</strong>
+            </span>
+          </label>
+
+          <label class="method-card">
+            <input type="radio" name="paymentMethod" value="card">
+            <span class="method-radio"></span>
+            <span class="method-copy">
+              <strong>Debit / credit card</strong>
+            </span>
+          </label>
+
+          <label class="method-card">
+            <input type="radio" name="paymentMethod" value="pay-on-delivery">
+            <span class="method-radio"></span>
+            <span class="method-copy">
+              <strong>Pay on delivery</strong>
+            </span>
+          </label>
+        </section>
+
+        <section class="content-section">
+          <label class="field" for="orangeMoneyNumber">
+            <span id="paymentNumberLabel">Orange Money number</span>
+            <input id="orangeMoneyNumber" name="orangeMoneyNumber" type="tel" autocomplete="tel">
+          </label>
+        </section>
+
+        <button class="primary-button" id="reviewOrderButton" type="submit">Review order -></button>
+      </form>
+    </section>
+  </main>
+
+  <div class="toast" id="paymentToast" role="status" aria-live="polite">Payment details saved</div>
+
+  <script src="../../scripts/core/catalog.js"></script>
+  <script src="../../scripts/core/cart.js"></script>
+  <script src="../../scripts/core/checkout.js"></script>
+  <script src="../../scripts/modules/checkout/payment.js"></script>
+</body>
+</html>

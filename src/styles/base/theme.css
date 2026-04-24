@@ -1,0 +1,25 @@
+:root {
+  --bg-app: #f5f1e9;
+  --bg-screen: #fbfaf6;
+  --surface: #ffffff;
+  --surface-soft: #f3f0ea;
+  --surface-muted: #ece7de;
+  --text-strong: #222222;
+  --text-body: #6e685d;
+  --text-soft: #a8a091;
+  --line: #e6e0d6;
+  --accent: #20a87f;
+  --accent-soft: #dff5ee;
+  --shadow: 0 18px 40px rgba(64, 46, 18, 0.08);
+  --radius-screen: 34px;
+  --radius-card: 18px;
+  --radius-pill: 999px;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, #fffdf7 0%, #f6f0e5 42%, #efe7d8 100%);
+  color: var(--text-strong);
+  font-family: var(--font-family);
+}

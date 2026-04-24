@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalMart - Profile</title>
+  <link rel="stylesheet" href="../../styles/base/reset.css">
+  <link rel="stylesheet" href="../../styles/base/theme.css">
+  <link rel="stylesheet" href="../../styles/pages/profile.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-screen">
+      <header class="topbar">
+        <button class="text-button" id="editProfileButton" type="button">
+          <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 20H8L18 10C18.55 9.45 18.55 8.55 18 8L16 6C15.45 5.45 14.55 5.45 14 6L4 16V20Z"></path>
+            <path d="M13 7L17 11"></path>
+          </svg>
+          <span>Edit</span>
+        </button>
+        <h1>Profile</h1>
+        <a class="home-pill" href="../home/index.html">Home</a>
+      </header>
+
+      <section class="profile-hero">
+        <div class="profile-avatar" aria-hidden="true">
+          <span id="avatarInitials">LN</span>
+        </div>
+        <h2 id="profileName">Lerato Ntakhwa</h2>
+        <p class="profile-subtitle" id="profileSubtitle">Verified buyer | Gaborone, Botswana</p>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <strong>12</strong>
+          <span>Orders</span>
+        </article>
+        <article class="stat-card">
+          <strong>5</strong>
+          <span>Reviews</span>
+        </article>
+        <article class="stat-card">
+          <strong>3</strong>
+          <span>Saved vendors</span>
+        </article>
+      </section>
+
+      <form id="profileForm">
+        <section class="info-card">
+          <h3>Personal details</h3>
+          <label class="editable-row">
+            <span>Full name</span>
+            <input id="fullName" name="fullName" type="text" value="Lerato Ntakhwa" disabled>
+          </label>
+          <label class="editable-row">
+            <span>Email</span>
+            <input id="email" name="email" type="email" value="lerato.ntakhwa@email.com" disabled>
+          </label>
+          <label class="editable-row">
+            <span>Phone</span>
+            <input id="phone" name="phone" type="tel" value="+267 7x xxx xxx" disabled>
+          </label>
+          <div class="info-row">
+            <span>Member since</span>
+            <strong>January 2026</strong>
+          </div>
+        </section>
+
+        <section class="info-card">
+          <h3>Delivery address</h3>
+          <label class="editable-row">
+            <span>Street / area</span>
+            <input id="street" name="street" type="text" value="Plot 123, Phase 2" disabled>
+          </label>
+          <label class="editable-row">
+            <span>City</span>
+            <input id="city" name="city" type="text" value="Gaborone" disabled>
+          </label>
+          <label class="editable-row">
+            <span>Postcode</span>
+            <input id="postcode" name="postcode" type="text" value="0000" disabled>
+          </label>
+          <label class="editable-row">
+            <span>Country</span>
+            <input id="country" name="country" type="text" value="Botswana" disabled>
+          </label>
+        </section>
+
+        <section class="info-card">
+          <h3>Preferences</h3>
+          <label class="editable-row">
+            <span>Preferred payment</span>
+            <input id="paymentPreference" name="paymentPreference" type="text" value="Orange Money" disabled>
+          </label>
+          <label class="editable-row">
+            <span>Delivery option</span>
+            <input id="deliveryPreference" name="deliveryPreference" type="text" value="Standard delivery" disabled>
+          </label>
+          <label class="editable-row">
+            <span>Notifications</span>
+            <input id="notifications" name="notifications" type="text" value="Enabled" disabled>
+          </label>
+        </section>
+
+        <div class="form-actions" id="profileActions" hidden>
+          <button class="secondary-button" id="cancelProfileButton" type="button">Cancel</button>
+          <button class="primary-button" type="submit">Save changes</button>
+        </div>
+      </form>
+
+      <nav class="bottom-nav" aria-label="Primary">
+        <a class="nav-item" href="../home/index.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 10.5L12 4L20 10.5V19C20 19.55 19.55 20 19 20H14V14H10V20H5C4.45 20 4 19.55 4 19V10.5Z"></path>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a class="nav-item" href="../home/index.html?focusSearch=1">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="5.5"></circle>
+            <path d="M15.2 15.2L20 20"></path>
+          </svg>
+          <span>Search</span>
+        </a>
+        <a class="nav-item" href="../cart/index.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 6H7L8.2 13.2C8.28 13.68 8.7 14.03 9.19 14.03H17.3C17.76 14.03 18.17 13.72 18.29 13.28L19.75 8.25H8"></path>
+            <circle cx="10" cy="18.25" r="1.25"></circle>
+            <circle cx="17" cy="18.25" r="1.25"></circle>
+          </svg>
+          <span>Cart</span>
+        </a>
+        <a class="nav-item is-active" href="../profile/index.html" aria-current="page">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8.25" r="3.25"></circle>
+            <path d="M6 19C6.85 16.4 9.03 15 12 15C14.97 15 17.15 16.4 18 19"></path>
+          </svg>
+          <span>Profile</span>
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <script src="../../scripts/modules/profile/index.js"></script>
+</body>
+</html>
