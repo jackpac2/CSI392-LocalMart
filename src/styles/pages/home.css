@@ -46,7 +46,7 @@ body {
   font-family: "DM Serif Display", Georgia, serif;
   font-size: 1.85rem;
   line-height: 1;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   margin-bottom: 8px;
 }
 
@@ -344,12 +344,138 @@ body {
 @media (max-width: 420px) {
   body {
     padding: 0;
+    overflow: hidden;
   }
 
   .phone-screen {
     width: 100%;
-    min-height: 100vh;
+    height: 100dvh;
+    min-height: 0;
     border-radius: 0;
     border: 0;
+    padding: 14px 14px 82px;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .phone-screen::-webkit-scrollbar {
+    display: none;
+  }
+
+  .phone-screen::before {
+    height: 82px;
+  }
+
+  .topbar {
+    margin-bottom: 12px;
+  }
+
+  .topbar h1 {
+    font-size: 1.62rem;
+    margin-bottom: 4px;
+  }
+
+  .location {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    max-width: 100%;
+  }
+
+  .search-panel {
+    margin-bottom: 14px;
+  }
+
+  .search-box {
+    height: 42px;
+    border-radius: 14px;
+    padding: 0 12px;
+  }
+
+  .chip-row {
+    gap: 6px;
+    padding-top: 10px;
+  }
+
+  .chip {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
+
+  .content-section {
+    margin-bottom: 14px;
+  }
+
+  .section-header {
+    margin-bottom: 8px;
+  }
+
+  .section-header h2 {
+    font-size: 0.96rem;
+  }
+
+  .vendors-row {
+    gap: 6px;
+  }
+
+  .vendor-avatar {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 5px;
+  }
+
+  .vendor-name {
+    font-size: 0.68rem;
+  }
+
+  .product-grid {
+    gap: 10px;
+  }
+
+  .product-card {
+    border-radius: 14px;
+    padding: 8px;
+  }
+
+  .product-image {
+    height: 86px;
+    border-radius: 12px;
+    margin-bottom: 7px;
+  }
+
+  .rating {
+    margin-bottom: 6px;
+  }
+
+  .product-title {
+    font-size: 0.84rem;
+  }
+
+  .product-vendor {
+    font-size: 0.72rem;
+    margin-bottom: 4px;
+  }
+
+  .product-price {
+    font-size: 0.9rem;
+  }
+
+  .bottom-nav {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    border-radius: 18px;
+    padding: 8px 4px 7px;
+    z-index: 20;
+  }
+
+  .nav-item {
+    gap: 4px;
+    font-size: 0.66rem;
+  }
+
+  .nav-icon {
+    width: 17px;
+    height: 17px;
   }
 }
